@@ -1,0 +1,57 @@
+public class Mario {
+    private int vidas;
+    private int pontos;
+    private String estado;
+
+    public Mario() {
+        this.vidas = 3;
+        this.pontos = 0;
+        this.estado = "Pequeno";
+    }
+
+    public void andar() {
+        System.out.println("Mario está andando...");
+    }
+
+    public void correr() {
+        System.out.println("Mario está correndo!");
+    }
+
+    public void pular() {
+        System.out.println("Mario pulou!");
+    }
+
+    public void agachar() {
+        System.out.println("Mario agachou!");
+    }
+
+    public void levantar() {
+        System.out.println("Mario levantou!");
+    }
+
+    public void ganharPontos(int qtd) {
+        this.pontos += qtd;
+    }
+
+    public void pegarVida() {
+        this.vidas++;
+    }
+
+    public void levarDano() {
+        this.vidas--;
+    }
+
+    public void mudarEstado(String novoEstado) {
+        this.estado = novoEstado;
+    }
+
+    public void mostrarStatus() {
+        System.out.println("Vidas: " + vidas);
+        System.out.println("Pontos: " + pontos);
+        System.out.println("Estado: " + estado);
+    }
+
+    public int getVidas() {
+        return vidas;
+    }
+}
