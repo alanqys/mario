@@ -1,0 +1,25 @@
+class Inimigo {
+    private String tipoInimigo;
+
+    public Inimigo(String tipoInimigo) {
+        this.tipoInimigo = tipoInimigo;
+    }
+
+    public String getTipoInimigo() {
+        return tipoInimigo;
+    }
+
+    public void setTipoInimigo(String tipoInimigo) {
+        this.tipoInimigo = tipoInimigo;
+    }
+
+    public void mostrarInfo() {
+        System.out.println("Inimigo: " + tipoInimigo);
+    }
+}
+
+class Buraco {
+    public void mostrarInfo() {
+        System.out.println("Apareceu um buraco!");
+    }
+}
