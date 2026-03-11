@@ -1,0 +1,34 @@
+import java.util.Random;
+
+public class Main {
+    public static void main(String[] args) {
+        Mario mario = new Mario();
+        Random random = new Random();
+
+        for (int i = 0; i < 10; i++) {
+            if (mario.getVidas() <= 0) break;
+
+            int evento = random.nextInt(3);
+
+            if (evento == 0) {
+                Inimigo terrestre = new Inimigo("Terrestre");
+                terrestre.mostrarInfo();
+                mario.pular();
+                mario.ganharPontos(10);
+            } else if (evento == 1) {
+                Inimigo voador = new Inimigo("Voador");
+                voador.mostrarInfo();
+                mario.agachar();
+                mario.ganharPontos(15);
+                mario.levantar();
+            } else {
+                Buraco buraco = new Buraco();
+                buraco.mostrarInfo();
+                mario.pular();
+                mario.ganharPontos(5);
+            }
+        }
+
+        mario.mostrarStatus();
+    }
+}
